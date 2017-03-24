@@ -17,4 +17,3 @@ suite('temperature', function() {
         assert.match(converted.innerHTML, /ERROR/);
     });
 });
-

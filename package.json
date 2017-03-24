@@ -1,9 +1,8 @@
 {
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*"
+    "chai": "^3.5.0",
+    "mocha": "latest"
   },
   "name": "temperature",
   "description": "ETSII ULL Grado de Informatica",
