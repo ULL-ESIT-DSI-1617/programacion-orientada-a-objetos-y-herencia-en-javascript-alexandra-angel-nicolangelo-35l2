@@ -28,7 +28,7 @@ function select() {
 function calculate() {
   var result;
   var temp = original.value;
-  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC|([fFcC]))/;
+  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC|c\sk|C\sK|f\sk|F\sK|([fFcC]))/;
   
   var m = temp.match(regexp);
   switch(m[2]) {
@@ -41,6 +41,10 @@ function calculate() {
         select();
         break;
     case 'K C':
+    case 'F K':
+    case 'f k':
+    case 'C K':
+    case 'c k':
     case 'k c':
     case 'K F':
     case 'k f':
@@ -55,7 +59,7 @@ function calculate() {
 function modificacion() {
   var result;
   var temp = original.value;
-  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC)/;
+  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC|c\sk|C\sK|f\sk|F\sK)/;
   var m = temp.match(regexp);
   var num = m[1];
   var type = m[2];
@@ -71,7 +75,19 @@ function modificacion() {
       result = (num-273.15);
       result = result.toFixed(1)+" Celsius ";
       converted.innerHTML = result;
-    }else {
+    }else if (type == "c k"| type == "C K"){
+      num = parseFloat(num);
+      result = (num+273.15);
+      result = result.toFixed(1)+" Kelvin ";
+      converted.innerHTML = result;
+    }else if (type == "f k"| type == "F K"){
+      num = parseFloat(num);
+      result = ((num - 32)/1.8)+273.15;
+      result = result.toFixed(1)+" Kelvin ";
+      converted.innerHTML = result;
+    }
+    
+    else {
       converted.innerHTML = "error! only (C/c, F/f, K F/k f, K C/k c) You type: "+type;
     }
     converted.innerHTML = result;
