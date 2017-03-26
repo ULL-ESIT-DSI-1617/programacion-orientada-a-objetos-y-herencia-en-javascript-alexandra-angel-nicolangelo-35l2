@@ -60,7 +60,7 @@ function modificacion() {
   var result;
   var temp = original.value;
   // var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC|([fFcC]))/;
-  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC|([fFcC]))/;
+  var regexp = /([-+]?\d+(?:\.\d*)?)\s*(k\sf|K\sF|k\sc|K\sC)/;
   var m = temp.match(regexp);
   var num = m[1];
   var type = m[2];
