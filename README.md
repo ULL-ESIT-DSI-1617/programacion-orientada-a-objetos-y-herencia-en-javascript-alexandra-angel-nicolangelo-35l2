@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# programacion-orientada-a-objetos-y-herencia-en-javascript-alexandra-angel-nicolangelo-35l2
-=======
 # Práctica 6: Programación orientada a objetos y Herencias en JavaScript
 
 ### Enlace a la Práctica 6
@@ -48,4 +45,3 @@ Casiano Rodríguez León
 [Enlace al grupo en GitHub](https://github.com/ULL-ESIT-DSI-1617/programacion-orientada-a-objetos-y-herencia-en-javascript-alexandra-angel-nicolangelo-35l2)
 
 
->>>>>>> 3433f04d2c38870ef2a518103ce80150c02ba79a
